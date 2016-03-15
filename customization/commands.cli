@@ -1,0 +1,8 @@
+# Mark the commands below to be run as a batch
+batch
+
+# Create a new thread pool for search threads
+/subsystem=ee/managed-thread-factory=myManagedThreadFactory:add(core-threads=5,max-threads=25,priority=5,context-service=default,jndi-name=java:jboss/ee/concurrency/factory/SearchThreadFactory)
+
+# Execute the batch
+run-batch

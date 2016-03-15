@@ -1,4 +1,4 @@
-FROM ccruz/accumulo:1.0.0
+FROM ccruz09/accumulo:1.0.0
 
 # Add custom scripts and modules for configuration and startup
 ADD customization /opt/jboss/wildfly/customization/

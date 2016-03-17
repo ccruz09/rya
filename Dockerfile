@@ -1,4 +1,4 @@
-FROM ccruz09/accumulo:1.0.0
+FROM ceagan/wildfly:9.0.2.Final
 
 # Add custom scripts and modules for configuration and startup
 ADD customization /opt/jboss/wildfly/customization/
@@ -17,7 +17,7 @@ RUN chmod +x /opt/jboss/wildfly/customization/*.sh && \
 #    yum install -y epel-release
 #    yum install -y xmlstarlet
 	
-
+USER jboss
 # Switch to jboss user for execution
 
 # Perform configuration of the jboss 
@@ -26,6 +26,6 @@ RUN /opt/jboss/wildfly/customization/execute.sh
 # Install the application war file
 ADD web.rya.war /opt/jboss/wildfly/standalone/deployments/
 
-ENV USER root
+
 # Set a custom startup command for the image
 CMD ["/opt/jboss/wildfly/customization/startup.sh"]

@@ -1,20 +1,5 @@
 #!/bin/bash
 
-###
-# #%L
-# SAPPHIRE Services
-# %%
-# Copyright (C) 2015 Harmonia Holdings Group, LLC
-# %%
-# This software is being made available to the Government of the United States
-# of America with unlimited rights.
-# -
-# The U.S. Government may use, modify, reproduce, perform, display, release, or
-# disclose information, in whole or in part, in any manner and for any purpose
-# whatsoever and request or authorize others to do so.
-# #L%
-###
-
 # Usage: startup.sh
 #
 

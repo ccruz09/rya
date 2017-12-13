@@ -15,5 +15,5 @@ env
 sed -i "s/instance\.zk=.*/instance\.zk=$ACCUMULO_PORT_2181_TCP_ADDR:$ACCUMULO_PORT_2181_TCP_PORT/" /opt/jboss/wildfly/modules/accumulo/configuration/main/environment.properties
 
 echo "=> Starting WildFly server"
-$JBOSS_HOME/bin/standalone.sh -b 0.0.0.0 -c standalone.xml
+$JBOSS_HOME/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0 -c standalone.xml
 
